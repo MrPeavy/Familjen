@@ -97,8 +97,9 @@ div.members {
     margin: 5px;
     width: 400px;
     height: auto;
-    
+    background-color: #C8C8C8;   
     display: inline-block;
+    border-radius: 5px;
 }
 
 .content {
@@ -118,17 +119,16 @@ div.members {
 }
 
 .content h3 {
-  display: block;
+  display: inline-block;
   margin: 0;
   font-size: 1.7em;
   color: #000;
   text-align: left;
-  padding-left: 5px;
   text-decoration: underline;
 }
 
 .content p {
-  display: block;
+  display: inline-block;
   margin: 0;
   font-size: 1em;
   color: #000000;
@@ -137,7 +137,6 @@ div.members {
   max-width: 250px;
   padding-bottom: 10px;
 }
-
  
 h2 {
   font-size: 3em;
