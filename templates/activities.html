@@ -1,0 +1,23 @@
+{% extends 'layout.html' %}
+{% set active_page = "activities" %}
+
+{% block content %}
+  <div class="jumbo">
+    <h2>Aktiviteter som Familjen anordnar och eller deltar på<h2>
+    <h3>Ärtsoppa</h3>
+    <p>Nästan varje torsdag under högskolans terminer så hålls det ärtsoppa någonstans i Karlskrona</p>
+    <h3>Studentfester</h3>
+    <ul>
+    	{% for party in parties %}
+    		{% if party.link != "None" %}
+    			<p><a href="{{ party.link }}" target="_blank">{{ party.name }}</a></p>
+    		{% else %}
+    		<p>{{ party.name }}</p>
+    		{% endif %}
+    		<p>Deltagit år: {{ party.year }}</p>
+    	{% endfor %}
+
+    </ul>
+
+  </div>
+{% endblock %}

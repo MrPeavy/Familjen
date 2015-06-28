@@ -1,0 +1,22 @@
+{% extends "layout.html" %}
+{% set active_page = "members" %}
+  
+{% block content %}
+<div class="jumbo">
+  <h2>Medlemmar</h2>
+  
+   {% for member in members %}
+  <div class="members">
+  		<img class="picture" src="{{ url_for('static', filename ='img/' + member.imageref) }}" width="150px" height="225px">
+  	<div class="content">
+  	<p><h3>{{ member.name }}</h3><p class="namep"> - {{ member.joined }}</p></p>
+		  <br><br>
+		  <span><p>{{ member.about }}</p></span>
+	</div>
+	 </col>
+  </div>
+{% endfor %} 
+
+  
+  </div>
+{% endblock %}

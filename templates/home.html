@@ -1,0 +1,10 @@
+{% extends "layout.html" %}
+{% set active_page = "home" %}
+
+{% block content %}
+  <div class="jumbo">
+    <h2>Välkomna till Familjen<h2>
+    <h3>Här finns lite ointressant info om oss<h3>
+    <img style="float: center;"src="{{ url_for('static', filename ='img/Familjen.png') }}" width="350" height="350">
+  </div>
+{% endblock %}

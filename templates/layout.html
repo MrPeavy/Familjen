@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+
+{% set navigation_bar = [
+('/', 'home', 'Hem'),
+('/members', 'members', 'Medlemmar'),
+('/activities', 'activities', 'Aktiviteter'),
+('/info', 'info', 'Info')
+] -%}
+
+{% set active_page = active_page|default('home') -%}
+
+<html>
+  <head>
+    <title>Familjen</title>
+    <link rel="shortcut icon" href="{{ url_for('static', filename='img/hand.png') }}">
+    <strong><link rel="stylesheet" href="{{ url_for('static', filename='css/main.css') }}"></strong>
+  </head>
+  <body>
+   
+    <header>
+      <div class="container">
+        <img class="img" src="{{ url_for('static', filename ='img/title.png') }}">
+        <strong><nav>
+          <ul class=menu>
+
+            {% for href, id, caption in navigation_bar %}
+             <li{% if id == active_page %} class="active"{% endif %}>
+               <a href="{{ href|e }}">{{ caption|e }}</a>
+             </li> 
+            {% endfor %}
+
+          </ul>
+        </nav></strong>
+      </div>
+    </header> 
+     
+    <div class="container">
+      {% block content %}
+      {% endblock %}
+    </div>
+     
+    <footer>
+      <p>
+        <h1 class="info">Kontakta oss: <a href="mailto:devnull@familjen.su">Familjen</a></h1>
+        <h1 class="copyright">Copyright &copy; 2015 by Familjen</h1>
+      </p>
+    </footer>
+  </body>
+</html>
