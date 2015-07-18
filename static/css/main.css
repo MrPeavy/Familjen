@@ -82,21 +82,22 @@ div.jumbo {
      -moz-border-radius: 6px;
           border-radius: 6px;
   overflow: auto;
+  text-align: center;
 }
 
-div.jumbo p {
+/*div.jumbo p {
   padding-left: 10px;
   padding-right: 10px;
-}
+}*/
 
 div.members {
-    -webkit-columns: 2; /* Chrome, Safari, Opera */
-    -moz-columns: 2; /* Firefox */
-    columns: 2;
-    float: left;
-    margin: 5px;
+    /*-webkit-columns: 2; /* Chrome, Safari, Opera */
+    /*-moz-columns: 2; /* Firefox */
+    /*columns: 2;
+    /*float: left;*/
+    margin: 0 auto;
     width: 400px;
-    height: auto;
+    /*height: auto;*/
     background-color: #C8C8C8;   
     display: inline-block;
     border-radius: 5px;
